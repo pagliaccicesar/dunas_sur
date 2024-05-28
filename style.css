@@ -1,0 +1,150 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    margin: 0;    
+    background-color:rgb(247, 247, 80);
+    font-family: "Source Code Pro", sans-serif;
+}
+
+  
+header {
+    padding: 1em 0;
+    /*background-color: #a96700;*/
+    background-color: black;
+}
+
+div.container {  
+    font-family: "Source Code Pro", sans-serif;
+    margin: 0 auto;
+	  padding: 1.5em 2em;
+	  text-align: center;
+}
+
+div.container a {
+    color: deepskyblue;
+    text-decoration: none;
+    font: 17px Raleway;
+    margin: 0px 10px;
+    padding: 6px 4px;
+    position: relative;
+    z-index: 0;
+    cursor: pointer;
+}
+
+div.topBotomBordersOut a:before, div.topBotomBordersOut a:after {
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 2px;
+    background: deepskyblue;
+    content: "";
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+div.topBotomBordersOut a:before {
+    top: 0px;
+    transform: translateY(10px);
+}
+
+div.topBotomBordersOut a:after {
+    bottom: 0px;
+    transform: translateY(-10px);
+}
+
+div.topBotomBordersOut a:hover:before, div.topBotomBordersOut a:hover:after {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+@media (max-width: 550px) {
+    div.container a {
+      font: 13px Raleway;
+    }
+}
+
+
+
+.heading {
+    
+    text-align: center;
+    font-size: 2.0em;
+    letter-spacing: 1px;
+    padding: 30px;
+    color: white;
+}
+.amu {
+  padding: auto 50px 0;
+}
+  
+.gallery-image {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+  
+  .gallery-image img {
+    height: 250px;
+    width: 350px;
+    transform: scale(1.0);
+    transition: transform 0.4s ease;
+  }
+  
+  .img-box {
+    box-sizing: content-box;
+    margin: 10px;
+    height: 250px;
+    width: 350px;
+    overflow: hidden;
+    display: inline-block;
+    color: white;
+    position: relative;
+    background-color: white;
+  }
+  
+  .caption {
+    position: absolute;
+    bottom: 5px;
+    left: 20px;
+    opacity: 0.0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  .transparent-box {
+    height: 250px;
+    width: 350px;
+    background-color:rgba(0, 0, 0, 0);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: background-color 0.3s ease;
+  }
+  
+  .img-box:hover img { 
+    transform: scale(1.1);
+  }
+  
+  .img-box:hover .transparent-box {
+    background-color:rgba(0, 0, 0, 0.5);
+  }
+  
+  .img-box:hover .caption {
+    transform: translateY(-20px);
+    opacity: 1.0;
+  }
+  
+  .img-box:hover {
+    cursor: pointer;
+  }
+  
+  .caption > p:nth-child(2) {
+    font-size: 0.8em;
+  }
+  
+  .opacity-low {
+    opacity: 0.5;
+  }
