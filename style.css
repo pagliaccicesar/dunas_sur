@@ -66,6 +66,19 @@ div.topBotomBordersOut a:hover:before, div.topBotomBordersOut a:hover:after {
     }
 }
 
+.logo_menu {
+    position: absolute;
+    width: 40px;
+    margin: 14px 30px;
+}
+@media (max-width: 550px) {
+  .logo_menu {
+    position: absolute;
+    width: 28px;
+    margin: 14px 3px;
+  }
+}
+
 
 
 .heading {
